@@ -1,0 +1,16 @@
+{% extends 'portfolio_application/index.html' %}
+{% load static %}
+{% block section %}
+<section class="projects">
+    <div class="project__text">
+        <h2 class="h2">&gt; Сайт-портфолио</h2>
+        <div class="text">Проект создаётся в процессе обучения.</div>
+        <a href="https://github.com/UglyGhoulChrist/portfolio" target="_blank" class="link"><span
+                class="text_violet">https://</span><span class="text_green">github.com/</span><span
+                class="text_pink">...</span><span class="text_violet">/portfolio</span></a>
+    </div>
+    <div class="picture">
+        <img src="{% static 'img/my-first-project.webp'%}" alt="first project" class="image">
+    </div>
+</section>
+{% endblock %}

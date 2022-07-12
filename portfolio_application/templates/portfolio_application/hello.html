@@ -1,0 +1,19 @@
+{% extends 'portfolio_application/index.html' %}
+{% load static %}
+{% block section %}
+<section class="home">
+    <div class="hi">
+        <div class="text">Привет. Меня зовут</div>
+        <h1 class="h1">UglyGhoulChrist</h1>
+        <h2 class="h2">&gt; Я учусь на фронтенд разработчика</h2>
+        <div class="text">Мои проекты:</div>
+        <a href="https://github.com/UglyGhoulChrist" target="_blank" class="link link_home">
+            <span class="text text_violet">// все мои </span>
+            <span class="text text_green">проекты </span>
+            <span class="text text_pink">на Github</span></a>
+    </div>
+    <div class="picture">
+        <img src="{% static 'img/image.webp'%}" alt="Gadjets" class="image">
+    </div>
+</section>
+{% endblock %}

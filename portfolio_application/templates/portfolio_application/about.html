@@ -1,0 +1,52 @@
+{% extends 'portfolio_application/index.html' %}
+{% load static %}
+{% block section %}
+<section class="about">
+    <div class="about__skills">
+        <h2 class="h2">&gt; Мои навыки фронтенд:</h2>
+        <ul class="about__list">
+            <li class="card">
+                <div class="card__picture">
+                    <img src="{% static 'img/html.svg'%}" alt="Html" class="card__image">
+                </div>
+                <div class="card__text">Семантическая разметка кода</div>
+            </li>
+            <li class="card">
+                <div class="card__picture">
+                    <img src="{% static 'img/css.svg'%}" alt="Css" class="card__image">
+                </div>
+                <div class="card__text">Стилизация элементов на странице</div>
+            </li>
+            <li class="card">
+                <div class="card__picture">
+                    <img src="{% static 'img/sass.svg'%}" alt="Saas" class="card__image">
+                </div>
+                <div class="card__text">Быстрое написание стилей</div>
+            </li>
+            <li class="card">
+                <div class="card__picture">
+                    <img src="{% static 'img/figma.svg'%}" alt="Figma" class="card__image">
+                </div>
+                <div class="card__text">Верстка сайта по макету Figma</div>
+            </li>
+        </ul>
+    </div>
+    <div class="about__skills">
+        <h2 class="h2">&gt; Мои навыки бэкэнд:</h2>
+        <ul class="about__list">
+            <li class="card">
+                <div class="card__picture">
+                    <img src="{% static 'img/python.svg'%}" alt="Python" class="card__image">
+                </div>
+                <div class="card__text">Язык программирования общего назначения</div>
+            </li>
+            <li class="card">
+                <div class="card__picture">
+                    <img src="{% static 'img/django.svg'%}" alt="Django" class="card__image">
+                </div>
+                <div class="card__text">Пока только изучаю</div>
+            </li>
+        </ul>
+    </div>
+</section>
+{% endblock %}
