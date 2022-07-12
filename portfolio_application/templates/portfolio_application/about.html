@@ -2,51 +2,20 @@
 {% load static %}
 {% block section %}
 <section class="about">
-    <div class="about__skills">
-        <h2 class="h2">&gt; Мои навыки фронтенд:</h2>
-        <ul class="about__list">
-            <li class="card">
-                <div class="card__picture">
-                    <img src="{% static 'portfolio_application/img/html.svg'%}" alt="Html5" class="card__image">
-                </div>
-                <div class="card__text">Семантическая разметка кода</div>
-            </li>
-            <li class="card">
-                <div class="card__picture">
-                    <img src="{% static 'portfolio_application/img/css.svg'%}" alt="Css3" class="card__image">
-                </div>
-                <div class="card__text">Стилизация элементов на странице</div>
-            </li>
-            <li class="card">
-                <div class="card__picture">
-                    <img src="{% static 'portfolio_application/img/sass.svg'%}" alt="Saas" class="card__image">
-                </div>
-                <div class="card__text">Быстрое написание стилей</div>
-            </li>
-            <li class="card">
-                <div class="card__picture">
-                    <img src="{% static 'portfolio_application/img/figma.svg'%}" alt="Figma" class="card__image">
-                </div>
-                <div class="card__text">Верстка сайта по макету Figma</div>
-            </li>
-        </ul>
-    </div>
-    <div class="about__skills">
-        <h2 class="h2">&gt; Мои навыки бэкэнд:</h2>
-        <ul class="about__list">
-            <li class="card">
-                <div class="card__picture">
-                    <img src="{% static 'portfolio_application/img/python.svg'%}" alt="Python" class="card__image">
-                </div>
-                <div class="card__text">Язык программирования общего назначения</div>
-            </li>
-            <li class="card">
-                <div class="card__picture">
-                    <img src="{% static 'portfolio_application/img/django.svg'%}" alt="Django" class="card__image">
-                </div>
-                <div class="card__text">Пока только изучаю</div>
-            </li>
-        </ul>
-    </div>
+    <h2 class="h2">&gt; Мои навыки:</h2>
+    {% if skills %}
+    <ul class="about__list">
+        {% for skill in skills %}
+        <li class="card">
+            <div class="card__picture">
+                <img src="{{skill.picture.url}}" alt="{{skill.title}}" class="card__image">
+            </div>
+            <div class="card__text">{{skill.description}}</div>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h2 class="h2">Навыков нет</h2>
+    {% endif %}
 </section>
 {% endblock %}

@@ -2,15 +2,25 @@
 {% load static %}
 {% block section %}
 <section class="projects">
+    {% if projects %}
+    {% for project in projects %}
     <div class="project__text">
-        <h2 class="h2">&gt; Сайт-портфолио</h2>
-        <div class="text">Проект создаётся в процессе обучения.</div>
-        <a href="https://github.com/UglyGhoulChrist/portfolio" target="_blank" class="link"><span
+        <h2 class="h2">&gt; {{project.title}}</h2>
+        <div class="text">{{project.description}}</div>
+        <!-- <a href="https://github.com/UglyGhoulChrist/portfolio" target="_blank" class="link"><span
                 class="text_violet">https://</span><span class="text_green">github.com/</span><span
-                class="text_pink">...</span><span class="text_violet">/portfolio</span></a>
+                class="text_pink">...</span><span class="text_violet">/portfolio</span></a> -->
+        <a href="{{project.link_project}}" target="_blank" class="link"><span class="text_violet">https://</span><span
+                class="text_green">github.com/</span><span class="text_pink">...</span><span
+                class="text_violet">/portfolio</span></a>
     </div>
     <div class="picture">
-        <img src="{% static 'portfolio_application/img/my-first-project.webp'%}" alt="first project" class="image">
+        <!-- <img src="{% static 'portfolio_application/img/my-first-project.webp'%}" alt="first project" class="image"> -->
+        <img src="{{project.picture}}" alt="first project" class="image">
     </div>
+    {% endfor %}
+    {% else %}
+    <h2 class="h2">Проектов нет</h2>
+    {% endif %}
 </section>
 {% endblock %}

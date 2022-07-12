@@ -7,7 +7,7 @@ class Skill(models.Model):
         verbose_name_plural = 'Навыки'
     title = models.CharField(verbose_name='Название навыка', max_length=100)
     description = models.TextField(verbose_name='Описание навыка')
-    picture = models.ImageField(verbose_name='Картинка навыка')
+    picture = models.ImageField(verbose_name='Картинка навыка',upload_to='media/', null=True, blank=True)
 
     def __str__(self):
         return f'{self.title} {self.description}'
