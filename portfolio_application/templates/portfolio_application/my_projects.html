@@ -16,7 +16,7 @@
     </div>
     <div class="picture">
         <!-- <img src="{% static 'portfolio_application/img/my-first-project.webp'%}" alt="first project" class="image"> -->
-        <img src="{{project.picture}}" alt="first project" class="image">
+        <img src="{{project.picture.url}}" alt="{{project.title}}" class="image">
     </div>
     {% endfor %}
     {% else %}

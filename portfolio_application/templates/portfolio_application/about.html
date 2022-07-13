@@ -8,7 +8,11 @@
         {% for skill in skills %}
         <li class="card">
             <div class="card__picture">
+                {% if skill.picture %}
                 <img src="{{skill.picture.url}}" alt="{{skill.title}}" class="card__image">
+                {% else %}
+                <img src="https://picsum.photos/200" alt="{{skill.title}}" class="card__image">
+                {% endif %}
             </div>
             <div class="card__text">{{skill.description}}</div>
         </li>
