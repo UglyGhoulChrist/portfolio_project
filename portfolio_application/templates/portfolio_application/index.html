@@ -15,54 +15,54 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <nav class="nav">
-                <a href="{% url 'hello' %}" class="link">привет</a>
-                <a href="{% url 'about' %}" class="link">обо мне</a>
-                <a href="{% url 'my_projects' %}" class="link">мои проекты</a>
-                <a href="{% url 'contacts' %}" class="link">контакты</a>
-            </nav>
-        </header>
+<div class="wrapper">
+    <header class="header">
+        <nav class="nav">
+            <a href="{% url 'hello' %}" class="link">привет</a>
+            <a href="{% url 'about' %}" class="link">обо мне</a>
+            <a href="{% url 'my_projects' %}" class="link">мои проекты</a>
+            <a href="{% url 'contacts' %}" class="link">контакты</a>
+        </nav>
+    </header>
 
-        <main class="main">
-            {% block section %}{% endblock %}
-        </main>
-        <footer class="footer">
-            <div class="footer__mail"><a href="mailto:UglyGhoulChrist@gmail.com" target="_blank"
-                    class="link_footer">UglyGhoulChrist@gmail.com</a></div>
-            <ul class="list">
-                <li class="item">
-                    <a href="https://api.whatsapp.com/send?phone=791018071**" target="_blank" class="link_footer">
-                        <div class="icon">
-                            <img src="{% static 'portfolio_application/img/WhatsApp.svg'%}" alt="WhatsApp" class="image">
-                        </div>
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="viber://add?number=791018071**" target="_blank" class="link_footer">
-                        <div class="icon">
-                            <img src="{% static 'portfolio_application/img/Viber.svg'%}" alt="Viber" class="image">
-                        </div>
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#" class="link_footer">
-                        <div class="icon">
-                            <img src="{% static 'portfolio_application/img/Facebook.svg'%}" alt="Facebook" class="image">
-                        </div>
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#" class="link_footer">
-                        <div class="icon">
-                            <img src="{% static 'portfolio_application/img/Instagram.svg'%}" alt="Instagram" class="image">
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </footer>
-    </div>
+    <main class="main">
+        {% block section %}{% endblock %}
+    </main>
+    <footer class="footer">
+        <div class="footer__mail"><a href="mailto:UglyGhoulChrist@gmail.com" target="_blank"
+                                     class="link_footer">UglyGhoulChrist@gmail.com</a></div>
+        <ul class="list">
+            <li class="item">
+                <a href="https://api.whatsapp.com/send?phone=791018071**" target="_blank" class="link_footer">
+                    <div class="icon">
+                        <img src="{% static 'portfolio_application/img/WhatsApp.svg'%}" alt="WhatsApp" class="image">
+                    </div>
+                </a>
+            </li>
+            <li class="item">
+                <a href="viber://add?number=791018071**" target="_blank" class="link_footer">
+                    <div class="icon">
+                        <img src="{% static 'portfolio_application/img/Viber.svg'%}" alt="Viber" class="image">
+                    </div>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#" class="link_footer">
+                    <div class="icon">
+                        <img src="{% static 'portfolio_application/img/Facebook.svg'%}" alt="Facebook" class="image">
+                    </div>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#" class="link_footer">
+                    <div class="icon">
+                        <img src="{% static 'portfolio_application/img/Instagram.svg'%}" alt="Instagram" class="image">
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</div>
 </body>
 
 </html>
