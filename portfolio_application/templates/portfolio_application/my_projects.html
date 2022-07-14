@@ -7,15 +7,11 @@
     <div class="project__text">
         <h2 class="h2">&gt; {{project.title}}</h2>
         <div class="text">{{project.description}}</div>
-        <!-- <a href="https://github.com/UglyGhoulChrist/portfolio" target="_blank" class="link"><span
-                class="text_violet">https://</span><span class="text_green">github.com/</span><span
-                class="text_pink">...</span><span class="text_violet">/portfolio</span></a> -->
         <a href="{{project.link_project}}" target="_blank" class="link"><span class="text_violet">https://</span><span
                 class="text_green">github.com/</span><span class="text_pink">...</span><span
                 class="text_violet">/portfolio</span></a>
     </div>
     <div class="picture">
-        <!-- <img src="{% static 'portfolio_application/img/my-first-project.webp'%}" alt="first project" class="image"> -->
         <img src="{{project.picture.url}}" alt="{{project.title}}" class="image">
     </div>
     {% endfor %}
