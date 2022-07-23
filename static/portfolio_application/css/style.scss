@@ -1,0 +1,162 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap");
+
+@import 'reset';
+
+$background-color: black;
+$border: #242424;
+$color-link: #90CAF9;
+$color-link-after: #ffa500;
+$color-link-after_alfa: rgba(255, 165, 0, .5);
+$color-link-hover: #E3F2FD;
+$color-h1: #E3F2FD;
+$color-h2: #3F51B5;
+$color-text: #c8c8c8;
+$color-text-violet: #4D5BCE;
+$color-text-green: #43D9AD;
+$color-text-pink: #E99287;
+
+
+// глобальные стили
+
+html {
+    font-size: 16px;
+}
+
+body {
+    line-height: 1;
+    overflow-x: hidden;
+    background: $background-color;
+    font-family: "Fira Code", monospace;
+}
+
+.wrapper {
+    // max-width: 1440px;
+    min-height: 100%;
+    // margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+@import 'header';
+
+main {
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+._container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.home,
+.about,
+.projects,
+.contacts {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px 20px;
+
+    @media (min-width: 769px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+._collumn {}
+
+.h1 {
+    margin-bottom: 3vw;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: $color-h1;
+
+    @media (min-width: 425px) {
+        font-size: 2.5rem;
+    }
+}
+
+.h2 {
+    margin-bottom: 2vw;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: $color-h2;
+
+    @media (min-width: 425px) {
+        font-size: 2rem;
+    }
+}
+
+.link {
+    display: inline-block;
+    margin-bottom: 1vw;
+    line-height: 1.5;
+    color: $color-link;
+    position: relative;
+    transition: all 0.5s ease 0s;
+
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 100%;
+        opacity: .3;
+        background: $color-link-after;
+        position: absolute;
+        top: 30px;
+        transition: all 0.5s ease 0s;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background: $color-link-after;
+        position: absolute;
+        top: 30px;
+        transition: all 0.5s ease 0s;
+    }
+}
+
+.text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: $color-text;
+
+    &_violet {
+        color: $color-text-violet;
+    }
+
+    &_green {
+        color: $color-text-green;
+    }
+
+    &_pink {
+        color: $color-text-pink;
+    }
+}
+
+.image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+@import 'hello';
+
+@import 'about';
+
+@import 'projects';
+
+@import 'contacts';
+
+@import 'footer';

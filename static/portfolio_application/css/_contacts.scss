@@ -1,0 +1,66 @@
+.label {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-text;
+    margin-bottom: 10px;
+}
+
+.input {
+    display: block;
+    margin-bottom: 24px;
+    border: 1px solid $border;
+    border-radius: 8px;
+    padding: 10px 15px;
+    width: 70%;
+    transition: all 0.3s ease 0s;
+}
+
+.input_message {
+    height: 80px;
+    resize: none;
+}
+
+.input:hover {
+    box-shadow: 0px 0px 24px 0px $color-link-after_alfa;
+    box-shadow: 0px 0px 16px 0px $color-link-after_alfa;
+}
+
+.button {
+    cursor: pointer;
+    display: block;
+    background: $border;
+    border-radius: 8px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-text;
+    transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+    text-shadow: 0px 0px 12px $color-link-after;
+    text-shadow: 0px 0px 8px $color-link-after;
+}
+
+.code {
+
+    &__list {
+        counter-reset: item;
+        font-size: 0;
+    }
+
+    &__item {
+
+        &::before {
+            counter-increment: item;
+            content: counter(item);
+            display: inline-block;
+            width: 25px;
+            color: $color-text;
+        }
+    }
+}
