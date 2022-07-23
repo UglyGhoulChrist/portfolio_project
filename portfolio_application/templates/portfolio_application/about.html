@@ -2,24 +2,45 @@
 {% load static %}
 {% block section %}
 <section class="about">
-    <h2 class="h2">&gt; Мои навыки:</h2>
-    {% if skills %}
-    <ul class="about__list">
-        {% for skill in skills %}
-        <li class="card">
-            <div class="card__picture">
-                {% if skill.picture %}
-                <img src="{{skill.picture.url}}" alt="{{skill.title}}" class="card__image">
-                {% else %}
-                <img src="https://picsum.photos/200" alt="{{skill.title}}" class="card__image">
-                {% endif %}
-            </div>
-            <div class="card__text">{{skill.description}}</div>
-        </li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <h2 class="h2">Навыков нет</h2>
-    {% endif %}
+    <div class="_collumn">
+        <h2 class="h2">&gt; Немного обо мне:</h2>
+        <div class="text">
+            * Мне 40 лет. Женат, дети.<br>
+            * <br>
+            * Осенью 2021 сильно увлёкся сферой It. Проходил курсы подготовки онлайн университетов,
+            смотрел
+            обучающие видео из интернета, создавал свои небольшие проекты.<br>
+            * Python понравился за простоту написания кода и огромную мощь языка, HTML и CSS - за сразу
+            видимый результат на экране.<br>
+            * Сейчас начинаю изучать Django и JavaScript.<br>
+            * В будущем нацелен на Vue.js<br>
+            * Так-же ради интереса пробовал писать программы для Andriod на Kotlin и для Windows на C#,
+            но не зацепило.<br>
+            * <br>
+            * Если нужен стажёр (ученик) обращайтесь!<br>
+            * <br>
+        </div>
+    </div>
+    <div class="_collumn">
+        <h2 class="h2">&gt; Мои навыки:</h2>
+        {% if skills %}
+        <ul class="list">
+            {% for skill in skills %}
+            <li class="card">
+                <div class="card__picture">
+                    {% if skill.picture %}
+                    <img src="{{skill.picture.url}}" alt="{{skill.title}}" class="card__image">
+                    {% else %}
+                    <img src="https://picsum.photos/200" alt="{{skill.title}}" class="card__image">
+                    {% endif %}
+                </div>
+                <div class="card__text">{{skill.description}}</div>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <h2 class="h2">Навыков нет</h2>
+        {% endif %}
+    </div>
 </section>
 {% endblock %}

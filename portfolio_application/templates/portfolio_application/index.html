@@ -18,56 +18,82 @@
 
 <body>
     <div class="wrapper">
-        <header class="header">
-            <nav class="nav">
-                <a href="{% url 'hello' %}" class="link">привет</a>
-                <a href="{% url 'about' %}" class="link">обо мне</a>
-                <a href="{% url 'my_projects' %}" class="link">мои проекты</a>
-                <a href="{% url 'contacts' %}" class="link">контакты</a>
+        <header class="header" id="header">
+            <nav class="navbar _container">
+                <div class="navbar__wrap">
+                    <div class="hamb">
+                        <div class="hamb__field" id="hamb">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </div>
+                    <a href="#" class="logo" id="logo">UglyGhoulChrist</a>
+                    <ul class="menu" id="menu">
+                        <li class="menu__item">
+                            <a class="menu__link" href="{% url 'hello' %}">_привет</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="{% url 'about' %}">_обо мне</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="{% url 'projects' %}">_мои проекты</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="{% url 'contacts' %}">_контакты</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
+            <div class="popup" id="popup"></div>
+
         </header>
 
-        <main class="main">
+        <main class="main _container">
             {% block section %}{% endblock %}
         </main>
-        <footer class="footer">
-            <div class="footer__mail"><a href="mailto:UglyGhoulChrist@gmail.com" target="_blank"
-                    class="link_footer">UglyGhoulChrist@gmail.com</a></div>
-            <ul class="list">
-                <li class="item">
-                    <a href="https://api.whatsapp.com/send?phone=791018071**" target="_blank" class="link_footer">
-                        <div class="icon">
+        <footer class="footer _container">
+            <div class="footer__mail">
+                <a href="mailto:UglyGhoulChrist@gmail.com" target="_blank"
+                    class="footer__link">UglyGhoulChrist@gmail.com</a>
+            </div>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="https://api.whatsapp.com/send?phone=791018071**" target="_blank" class="footer__link">
+                        <div class="footer__icon">
                             <img src="{% static 'portfolio_application/img/WhatsApp.svg'%}" alt="WhatsApp"
-                                class="image">
+                                class="footer__image">
                         </div>
                     </a>
                 </li>
-                <li class="item">
-                    <a href="viber://add?number=791018071**" target="_blank" class="link_footer">
-                        <div class="icon">
-                            <img src="{% static 'portfolio_application/img/Viber.svg'%}" alt="Viber" class="image">
+                <li class="footer__item">
+                    <a href="viber://add?number=791018071**" target="_blank" class="footer__link">
+                        <div class="footer__icon">
+                            <img src="{% static 'portfolio_application/img/Viber.svg'%}" alt="Viber"
+                                class="footer__image">
                         </div>
                     </a>
                 </li>
-                <li class="item">
-                    <a href="#" class="link_footer">
-                        <div class="icon">
+                <li class="footer__item">
+                    <a href="#" class="footer__link">
+                        <div class="footer__icon">
                             <img src="{% static 'portfolio_application/img/Facebook.svg'%}" alt="Facebook"
-                                class="image">
+                                class="footer__image">
                         </div>
                     </a>
                 </li>
-                <li class="item">
-                    <a href="#" class="link_footer">
-                        <div class="icon">
+                <li class="footer__item">
+                    <a href="#" class="footer__link">
+                        <div class="footer__icon">
                             <img src="{% static 'portfolio_application/img/Instagram.svg'%}" alt="Instagram"
-                                class="image">
+                                class="footer__image">
                         </div>
                     </a>
                 </li>
             </ul>
         </footer>
     </div>
+    <script src="{% static 'portfolio_application/js/script.js'%}"></script>
 </body>
 
 </html>

@@ -2,17 +2,19 @@
 {% load static %}
 {% block section %}
 <section class="home">
-    <div class="hi">
+    <div class="_collumn">
         <div class="text">Привет. Меня зовут</div>
         <h1 class="h1">UglyGhoulChrist</h1>
         <!-- <h2 class="h2">&gt; Я учусь на фронтенд / бэкенд разработчика</h2> -->
         <h2 class="h2">&gt; Этот проект на Django</h2>
-        <a href="https://github.com/UglyGhoulChrist" target="_blank" class="link link_home">
-            <span class="text text_violet">// Мои </span>
-            <span class="text text_green">проекты </span>
-            <span class="text text_pink">на Github</span></a>
+        <div>
+            <a href="https://github.com/UglyGhoulChrist" target="_blank" class="link">
+                <span class="text text_violet">// Мои </span>
+                <span class="text text_green">проекты </span>
+                <span class="text text_pink">на Github</span></a>
+        </div>
     </div>
-    <div class="picture">
+    <div class="_collumn">
         <img src="{% static 'portfolio_application/img/image.webp'%}" alt="Gadjets" class="image">
     </div>
 </section>

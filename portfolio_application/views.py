@@ -11,9 +11,9 @@ def about(request):
     return render(request, 'portfolio_application/about.html', {'skills': skills})
 
 
-def my_projects(request):
+def projects(request):
     projects = Project.objects.all()
-    return render(request, 'portfolio_application/my_projects.html', {'projects': projects})
+    return render(request, 'portfolio_application/projects.html', {'projects': projects})
 
 
 def contacts(request):
